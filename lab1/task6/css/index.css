@@ -1,0 +1,51 @@
+* {
+    position: fixed;
+}
+#red {
+    background-color: red;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 30%;
+}
+#orange {
+    background-color: orange;
+    top: 0;
+    right: 0;
+    height: 10%;
+    width: 70%;
+}
+#blue {
+    background-color: blue;
+    top: 10%;
+    left: 0;
+    height: 80%;
+    width: 30%;
+}
+#yellow {
+    background-color: yellow;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    width: 70%;
+}
+#purple {
+    background-color: purple;
+    margin: 5%;
+    height: 8%;
+    width: 45%;
+}
+#green {
+    background-color: green;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 70%;
+}
+#pink {
+    background-color: pink;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    width: 30%;
+}
