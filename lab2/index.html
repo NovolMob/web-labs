@@ -1,46 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Лабораторная работа №2</title>
-    <link rel="stylesheet" href="style/index.css">
-</head>
-<body>
-    <form action="">
-        <h2 id="header">Заполни форму</h2>
-        <div id="first_name">
-            <label for="first_name">Имя</label>
-            <input type="text" id="first_name" name="first_name" placeholder="Ваше имя"  required maxlength="20">
-        </div>
-        <div id="last_name">
-            <label for="last_name">Фамилия</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Ваша фамилия" required maxlength="20">
-        </div>
-        <div id="gender">
-            <label for="gender" id="gender">Ваш пол</label>
-            <div id="gender-male">Мужской<input type="radio" name="gender" value="male" required></div>
-            <div id="gender-female">Женский<input type="radio" name="gender" value="female"></div>
-        </div>
-        <div id="age">
-            <label for="age">Ваш возраст</label>
-            <select name="age" required>
-                <option value="Выберите свой возвраст"></option>
-                <OPTION value="0-18 лет">0-18 лет</OPTION>
-                <OPTION value="18-30 лет">18-30 лет</OPTION>
-                <OPTION value="30-45 дет">30-45 лет</OPTION>
-                <OPTION value="45-60 лет">45-60 лет</OPTION>
-                <OPTION value="60+ лет">60+ лет</OPTION>
-            </select>
-        </div>
-        <div id="email">
-            <label for="email">Адрес электнонной почты</label>
-            <input id="email" type="email" name="email" required maxlength="50">
-            <div id="news_letter">
-                <label for="news_letter">Подписаться на рассылку</label>
-                <input type="checkbox" name="news_letter">
+<html>
+    <head>
+        <title>Лабораторная работа №1</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div id="top">Заголовок сайта</div>
+        <div id="container">
+            <div id="col1">
+                <p>
+                    <a href="./text1.html">Текст 1</a><br>
+                    <a href="./text2.html">Текст 2</a><br>
+                    <a href="./lab2.html">Лабараторка №2</a>
+                </p>
+            </div>   
+            <div id="col2">
+                <p>Контент. Дизайн CSS две колонки, пожалуй, самый популярный.
+                    Создать страницу с таким расположением колонок можно двумя способами, рассмотрим каждый отдельно.</p>
+               <p>С помощью CSS выполняется логическое форматирование html-документа, позволяющее разделить содержание и
+                    оформление html-документа Использование CSS рекомендовано к применению WWW-консорциумом.</p>
             </div>
         </div>
-        <input id="submit" type="submit" name="send" value="Отправить Данные">
-    </form>
-</body>
+        <div id="bottom">Подвал</div>
+    </body>
 </html>

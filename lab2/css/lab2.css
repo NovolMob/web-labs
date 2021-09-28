@@ -8,7 +8,7 @@ form {
     border-radius: 10px;
     font-size: 20px;
     width: 550px;
-    height: 300px;
+    height: 325px;
 }
 #header {
     width: 100%;
@@ -55,12 +55,9 @@ label#gender {
 #age {
     width: 50%;
     float: right;
-    height: 20%;
     text-align: center;
-    margin-bottom: 5px;
 }
 #email {
-    margin-top: 20px;
     text-align: center;
     width: 50%;
     float: left;
@@ -71,13 +68,28 @@ input#email {
     width: 90%;
 }
 #submit {
-    float: right;
+    font-size: 25px;
+    font-style: oblique;
+    margin-top: 5px;
     width: 50%;
     height: 32%;
     border-radius: 10px;
+    margin-left: 25%;
     text-align: center;
     background-color:forestgreen;
 }
-form:valid {
-    
+:checked {
+    background-color: green;
+}
+input:valid {
+    background-color: springgreen;
+}
+input:invalid {
+    background-color: salmon;
+}  
+input:required {
+    border: green 2px solid;
+}
+:optional {
+    border: gray 2px solid;
 }
