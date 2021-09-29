@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №2</title>
+    <link rel="stylesheet" href="css/lab2.css">
+</head>
+<body>
+    <form lang="ru" action="">
+        <h2 id="header">Заполни форму</h2>
+        <div id="first_name">
+            <label for="first_name">Имя</label>
+            <input type="text" id="first_name" name="first_name" required maxlength="20">
+        </div>
+        <div id="last_name">
+            <label for="last_name">Фамилия</label>
+            <input type="text" id="last_name" name="last_name" required maxlength="20">
+        </div>
+        <div id="email">
+            <label for="email">Адрес электнонной почты</label>
+            <input id="email" type="email" name="email" required maxlength="50">
+            <div id="news_letter">
+                <label for="news_letter">Подписаться на рассылку</label>
+                <input type="checkbox" name="news_letter">
+            </div>
+        </div>
+        <div id="gender">
+            <label for="gender" id="gender">Ваш пол</label>
+            <div id="gender-male">Мужской<input type="radio" name="gender" value="male"></div>
+            <div id="gender-female">Женский<input type="radio" name="gender" value="female"></div>
+        </div>
+        <div id="age">
+            <label for="age">Ваш возраст</label>
+            <select name="age">
+                <option value="Выберите свой возвраст"></option>
+                <OPTION value="0-18 лет">0-18 лет</OPTION>
+                <OPTION value="18-30 лет">18-30 лет</OPTION>
+                <OPTION value="30-45 дет">30-45 лет</OPTION>
+                <OPTION value="45-60 лет">45-60 лет</OPTION>
+                <OPTION value="60+ лет">60+ лет</OPTION>
+            </select>
+        </div>
+        <input id="submit" type="submit" name="send" value="Отправить">
+    </form>
+</body>
+</html>

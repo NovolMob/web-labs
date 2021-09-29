@@ -1,0 +1,95 @@
+form {
+    background-color:greenyellow;
+    border: black 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 550px;
+    height: 325px;
+}
+#header {
+    width: 100%;
+    text-align: center;
+}
+#first_name {
+    width: 50%;
+    text-align: center;
+    float: left;
+    padding: auto;
+    margin-bottom: 5px;
+}
+input#first_name {
+    width: 90%;
+}
+#last_name {
+    width: 50%;
+    text-align: center;
+    float: right;
+    margin-bottom: 5px;
+}
+input#last_name{
+    width: 90%;
+}
+#gender {
+    width: 50%;
+    float: left;
+    margin-bottom: 5px;
+}
+label#gender {
+    width: 100%;
+    text-align: center;
+}
+#gender-female{
+    text-align: center;
+    width: 50%;
+    float: right;
+}
+#gender-male{
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+#age {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+#email {
+    text-align: center;
+    width: 50%;
+    float: left;
+    margin-bottom: 5px;
+}
+input#email {
+    margin-top: 0;
+    width: 90%;
+}
+#submit {
+    font-size: 25px;
+    font-style: oblique;
+    margin-top: 5px;
+    width: 50%;
+    height: 32%;
+    border-radius: 10px;
+    margin-left: 25%;
+    text-align: center;
+    background-color:forestgreen;
+}
+:checked {
+    background-color: green;
+}
+input:valid {
+    background-color: springgreen;
+}
+input:invalid {
+    background-color: salmon;
+}  
+input:required {
+    border: green 2px solid;
+}
+:optional {
+    border: gray 2px solid;
+}
