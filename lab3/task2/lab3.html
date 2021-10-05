@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Лабораторная работа №2</title>
+    <title>Лабораторная работа №3</title>
     <link rel="stylesheet" href="css/lab3.css">
 </head>
 <body>
@@ -10,11 +10,11 @@
         <h2 id="header">Заполни форму</h2>
         <div id="first_name">
             <label for="first_name">Имя</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input type="text" autocomplete="off" id="first_name" name="first_name" required>
         </div>
         <div id="last_name">
             <label for="last_name">Фамилия</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input type="text" autocomplete="off" id="last_name" name="last_name" required>
         </div>
         <div id="email">
             <label for="email">Адрес электнонной почты</label>
@@ -42,6 +42,10 @@
         </div>
         <input id="submit" type="submit" name="send" value="Отправить">
     </form>
+
+    <div id="modal_window">
+        <div id="modal_window_content"></div>
+    </div>
 
     <script src="scripts/lab3.js"></script>
 </body>
