@@ -79,13 +79,7 @@ input#email {
 }
 :checked {
     background-color: green;
-}
-input:valid {
-    background-color: springgreen;
-}
-input:invalid {
-    background-color: salmon;
-}  
+} 
 input:required {
     border: green 2px solid;
 }

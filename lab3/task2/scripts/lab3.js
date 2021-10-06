@@ -5,32 +5,27 @@ const gender_male_input = document.getElementById("gender-male").getElementsByTa
 const gender_female_input = document.getElementById("gender-female").getElementsByTagName("input")[0]
 const age_selector = document.getElementById("age").getElementsByTagName("select")[0]
 
-const submit = document.getElementById("submit")
 const modal_window = document.getElementById("modal_window")
-const modal_window_content = document.getElementById("modal_window_content")
 const form = document.getElementsByTagName("form")[0]
 
+const open_form = document.getElementById("open_form")
+
+const pattern_name = /^[A-Za-zА-Яа-яЁё/s]+$/
 const valid_class = "valid"
 const invalid_class = "invalid"
 
-addValidTest(first_name_input, (element) => { return isUpper(element.value[0]) })
-addValidTest(last_name_input, (element) => { return isUpper(element.value[0]) })
+addValidTest(first_name_input, (element) => { return isUpper(element.value[0]) && pattern_name.test(element.value) })
+addValidTest(last_name_input, (element) => { return isUpper(element.value[0]) && pattern_name.test(element.value) })
+
+open_form.onclick = () => {
+    hiddenModalWindow(false)
+}
 
 form.onsubmit = () => {
     if (isFormValid(form)) {
-        fillModalWindow()
-        showModalWindow()
+        return true
     }
     return false
-}
-
-function fillModalWindow() {
-    modal_window_content.innerHTML =
-        first_name_input.value + "<br>" +
-        last_name_input.value + "<br>" +
-        email_input.value + "<br>" + 
-        get_gender() + "<br>" + 
-        age_selector.value
 }
 
 function get_gender() {
@@ -41,12 +36,15 @@ function get_gender() {
     }
 }
 
-function showModalWindow() {
-    modal_window.style.display = "block"
+function hiddenModalWindow(hidden) {
+    if (hidden) {
+        modal_window.style.display = "none"
+    } else {
+        modal_window.style.display = "block"
+    }
 }
 
 function isFormValid(form) {
-
     returned = true
     inputs = form.getElementsByTagName("input");
     for (let i = 0; i < inputs.length; i++) {

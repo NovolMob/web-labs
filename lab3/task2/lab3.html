@@ -6,45 +6,45 @@
     <link rel="stylesheet" href="css/lab3.css">
 </head>
 <body>
-    <form lang="ru" action="">
-        <h2 id="header">Заполни форму</h2>
-        <div id="first_name">
-            <label for="first_name">Имя</label>
-            <input type="text" autocomplete="off" id="first_name" name="first_name" required>
-        </div>
-        <div id="last_name">
-            <label for="last_name">Фамилия</label>
-            <input type="text" autocomplete="off" id="last_name" name="last_name" required>
-        </div>
-        <div id="email">
-            <label for="email">Адрес электнонной почты</label>
-            <input id="email" type="email" name="email" required maxlength="50">
-            <div id="news_letter">
-                <label for="news_letter">Подписаться на рассылку</label>
-                <input type="checkbox" name="news_letter">
-            </div>
-        </div>
-        <div id="gender">
-            <label for="gender" id="gender">Ваш пол</label>
-            <div id="gender-male">Мужской<input type="radio" name="gender" value="male"></div>
-            <div id="gender-female">Женский<input type="radio" name="gender" value="female"></div>
-        </div>
-        <div id="age">
-            <label for="age">Ваш возраст</label>
-            <select name="age">
-                <option value=""></option>
-                <option value="0-18 лет">0-18 лет</option>
-                <option value="18-30 лет">18-30 лет</option>
-                <option value="30-45 дет">30-45 лет</option>
-                <option value="45-60 лет">45-60 лет</option>
-                <option value="60+ лет">60+ лет</option>
-            </select>
-        </div>
-        <input id="submit" type="submit" name="send" value="Отправить">
-    </form>
+    <button id="open_form">Открыть форму</button>
 
     <div id="modal_window">
-        <div id="modal_window_content"></div>
+        <form lang="ru" action="">
+            <h2 id="header">Заполни форму</h2>
+            <div id="first_name">
+                <label for="first_name">Имя</label>
+                <input type="text" autocomplete="off" name="first_name" required>
+            </div>
+            <div id="last_name">
+                <label for="last_name">Фамилия</label>
+                <input type="text" autocomplete="off" name="last_name" required>
+            </div>
+            <div id="email">
+                <label for="email">Адрес электнонной почты</label>
+                <input id="email" type="email" name="email" required maxlength="50">
+                <div id="news_letter">
+                    <label for="news_letter">Подписаться на рассылку</label>
+                    <input type="checkbox" name="news_letter">
+                </div>
+            </div>
+            <div id="gender">
+                <label for="gender" id="gender">Ваш пол</label>
+                <div id="gender-male">Мужской<input type="radio" name="gender" value="male"></div>
+                <div id="gender-female">Женский<input type="radio" name="gender" value="female"></div>
+            </div>
+            <div id="age">
+                <label for="age">Ваш возраст</label>
+                <select name="age">
+                    <option value=""></option>
+                    <option value="0-18 лет">0-18 лет</option>
+                    <option value="18-30 лет">18-30 лет</option>
+                    <option value="30-45 дет">30-45 лет</option>
+                    <option value="45-60 лет">45-60 лет</option>
+                    <option value="60+ лет">60+ лет</option>
+                </select>
+            </div>
+            <input id="submit" type="submit" name="send" value="Отправить">
+        </form>
     </div>
 
     <script src="scripts/lab3.js"></script>
