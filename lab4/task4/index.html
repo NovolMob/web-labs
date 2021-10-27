@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа №3</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body onload="loadQuestions()">
+    <!-- <div id="question">
+        <label class="question-text">Text</label>
+
+        <div class="question-answer">
+            <input type="radio" name="question_answer" value="test">
+            <label for="question_answer">test</label>
+        </div>
+        <div class="question-answer">
+            <input type="radio" name="question_answer" value="test">
+            <label for="question_answer">test</label>
+        </div>
+        <div class="question-answer">
+            <input type="radio" name="question_answer" value="test">
+            <label for="question_answer">test</label>
+        </div>
+        <div class="question-answer">
+            <input type="radio" name="question_answer" value="test">
+            <label for="question_answer">test</label>
+        </div>
+    </div> -->
+
+    <div id="questions"></div>
+
+    <div id="answers_menu">
+        <div id="answers_menu_text">
+            <p id="now_amount_right_answer"></p>
+            <p id="last_amount_right_answer"></p>
+        </div>
+        <button id="check_answer_button" onclick="checkAnswers()">Проверить</button>
+    </div>
+
+    <script src="scripts/questionsDB.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

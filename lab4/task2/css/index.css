@@ -1,0 +1,10 @@
+#login_form {
+    float: right;
+    width: 250px;
+}
+.right-float {
+    float: right;
+}
+.full-width {
+    width: 100%;
+}
