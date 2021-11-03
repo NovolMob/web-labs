@@ -47,4 +47,5 @@ form.onsubmit = () => {
     setLogin(login_input.value)
     setPassword(password_input.value)
     saveUserToCookie()
+    return false
 }

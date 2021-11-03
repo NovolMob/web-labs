@@ -6,6 +6,7 @@ const now_amount_right_answer_text = "Количество правильный 
 const last_amount_right_answer_text = "В предыдущей попытке было правильных ответов "
 
 const questionsDiv = document.getElementById("questions")
+const answersMenuText = document.getElementById("answers_menu_text")
 const nowAmountRightAnswer = document.getElementById("now_amount_right_answer")
 const lastAmountRightAnswer = document.getElementById("last_amount_right_answer")
 
@@ -35,6 +36,14 @@ addAnswerInQuestion(thirdQuestion, createAnswer("Ячмень", "3"))
 setRightAnswer(thirdQuestion, "2")
 addQuestion(thirdQuestion)
 
+const question = createQuestion("dsadas")
+setText(question, "Из какого злака делается пшено?")
+addAnswerInQuestion(question, createAnswer("Овес", "1"))
+addAnswerInQuestion(question, createAnswer("Просо", "2"))
+addAnswerInQuestion(question, createAnswer("Ячмень", "3"))
+setRightAnswer(question, "2")
+addQuestion(question)
+
 function loadQuestions() {
     questions.forEach( (value, key, map) => {
         questionsDiv.appendChild(createUIQuestion(value))
@@ -48,6 +57,7 @@ function checkAnswers() {
             right += 1
         }
     } ) 
+    answersMenuText.hidden = false
     if (localStorage.getItem(last_amount_right_answer_tag) != null) {
         lastAmountRightAnswer.innerHTML = last_amount_right_answer_text + localStorage.getItem(last_amount_right_answer_tag)
     }
