@@ -1,9 +1,11 @@
 const question_id = "question"
 const question_answer_class = "question-answer"
 const question_text_class = "question-text"
+const line_div_id = "line_div"
 const last_amount_right_answer_tag = "last_amount_right_answer"
 const now_amount_right_answer_text = "Количество правильный ответов "
 const last_amount_right_answer_text = "В предыдущей попытке было правильных ответов "
+const questionInLine = 3
 
 const questionsDiv = document.getElementById("questions")
 const answersMenuText = document.getElementById("answers_menu_text")
@@ -36,18 +38,51 @@ addAnswerInQuestion(thirdQuestion, createAnswer("Ячмень", "3"))
 setRightAnswer(thirdQuestion, "2")
 addQuestion(thirdQuestion)
 
-const question = createQuestion("dsadas")
-setText(question, "Из какого злака делается пшено?")
-addAnswerInQuestion(question, createAnswer("Овес", "1"))
-addAnswerInQuestion(question, createAnswer("Просо", "2"))
-addAnswerInQuestion(question, createAnswer("Ячмень", "3"))
-setRightAnswer(question, "2")
-addQuestion(question)
+const fourthQuestion = createQuestion("fourth")
+setText(fourthQuestion, "Из какого злака делается пшено?")
+addAnswerInQuestion(fourthQuestion, createAnswer("Овес", "1"))
+addAnswerInQuestion(fourthQuestion, createAnswer("Просо", "2"))
+addAnswerInQuestion(fourthQuestion, createAnswer("Ячмень", "3"))
+setRightAnswer(fourthQuestion, "2")
+addQuestion(fourthQuestion)
+
+const fifthQuestion = createQuestion("fifth")
+setText(fifthQuestion, "Из какого злака делается пшено?")
+addAnswerInQuestion(fifthQuestion, createAnswer("Овес", "1"))
+addAnswerInQuestion(fifthQuestion, createAnswer("Просо", "2"))
+addAnswerInQuestion(fifthQuestion, createAnswer("Ячмень", "3"))
+setRightAnswer(fifthQuestion, "2")
+addQuestion(fifthQuestion)
+
+const sixthQuestion = createQuestion("sixth")
+setText(sixthQuestion, "Из какого злака делается пшено?")
+addAnswerInQuestion(sixthQuestion, createAnswer("Овес", "1"))
+addAnswerInQuestion(sixthQuestion, createAnswer("Просо", "2"))
+addAnswerInQuestion(sixthQuestion, createAnswer("Ячмень", "3"))
+setRightAnswer(sixthQuestion, "2")
+addQuestion(sixthQuestion)
+
+function createLineDiv() {
+    var div = document.createElement("div")
+    div.id = line_div_id
+    return div
+}
 
 function loadQuestions() {
+    var lastDiv = createLineDiv()
+    var divId = 0
+    var id = 0
     questions.forEach( (value, key, map) => {
-        questionsDiv.appendChild(createUIQuestion(value))
+        var curDivId = Math.floor(id / questionInLine)
+        if (curDivId != divId) {
+            questionsDiv.appendChild(lastDiv)
+            lastDiv = createLineDiv()
+            divId = curDivId
+        }
+        lastDiv.appendChild(createUIQuestion(value))
+        id++
     } ) 
+    questionsDiv.appendChild(lastDiv)
 }
 
 function checkAnswers() {
