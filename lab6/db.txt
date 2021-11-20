@@ -1,0 +1,47 @@
+[
+{
+"first_name":"\u041a\u0438\u0440\u0438\u043b\u043b",
+"last_name":"\u0428\u0438\u043a\u043e\u0432",
+"email":"shikov.kirich@gmail.com",
+"news_letter":"on",
+"gender":"male",
+"age":"0-18 \u043b\u0435\u0442",
+"send":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"
+},
+{
+"first_name":"\u041a\u0438\u0440\u0438\u043b\u043b",
+"last_name":"\u0428\u0438\u043a\u043e\u0432",
+"email":"shikov.kirich@gmail.com",
+"news_letter":"on",
+"gender":"male",
+"age":"0-18 \u043b\u0435\u0442",
+"send":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"
+},
+{
+"first_name":"\u041a\u0438\u0440\u0438\u043b\u043b",
+"last_name":"\u0428\u0438\u043a\u043e\u0432",
+"email":"shikov.kirich@gmail.com",
+"news_letter":"on",
+"gender":"male",
+"age":"0-18 \u043b\u0435\u0442",
+"send":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"
+},
+{
+"first_name":"\u041a\u0438\u0440\u0438\u043b\u043b",
+"last_name":"\u0428\u0438\u043a\u043e\u0432",
+"email":"shikov.kirich@gmail.com",
+"news_letter":"on",
+"gender":"male",
+"age":"0-18 \u043b\u0435\u0442",
+"send":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"
+},
+{
+"first_name":"\u041a\u0438\u0440\u0438\u043b\u043b",
+"last_name":"\u0428\u0438\u043a\u043e\u0432",
+"email":"shikov.kirich@gmail.com",
+"news_letter":"on",
+"gender":"male",
+"age":"0-18 \u043b\u0435\u0442",
+"send":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"
+}
+]

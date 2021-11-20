@@ -1,0 +1,114 @@
+form {
+    background-color:greenyellow;
+    border: black 2px solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 550px;
+}
+#header {
+    width: 100%;
+    text-align: center;
+}
+#first_name {
+    width: 50%;
+    text-align: center;
+    float: left;
+    padding: auto;
+    margin-bottom: 5px;
+}
+input#first_name {
+    width: 90%;
+}
+#last_name {
+    width: 50%;
+    text-align: center;
+    float: right;
+    margin-bottom: 5px;
+}
+input#last_name{
+    width: 90%;
+}
+#gender {
+    width: 50%;
+    float: left;
+    margin-bottom: 5px;
+}
+label#gender {
+    width: 100%;
+    text-align: center;
+}
+#gender-female{
+    text-align: center;
+    width: 50%;
+    float: right;
+}
+#gender-male{
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+#age {
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+#email {
+    text-align: center;
+    width: 50%;
+    float: left;
+    margin-bottom: 5px;
+}
+input#email {
+    margin-top: 0;
+    width: 90%;
+}
+#submit {
+    font-size: 25px;
+    font-style: oblique;
+    margin-top: 5px;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 25%;
+    text-align: center;
+    background-color:forestgreen;
+}
+:checked {
+    background-color: green;
+} 
+input:required {
+    border: green 2px solid;
+}
+:optional {
+    border: gray 2px solid;
+}
+.valid {
+    background-color: springgreen;
+}
+.invalid {
+    background-color: red;
+}
+#modal_window {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+#modal_window #modal_window_content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    z-index: 99999;
+}
