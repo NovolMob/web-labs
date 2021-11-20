@@ -1,0 +1,15 @@
+#login_form {
+    float: right;
+    width: 250px;
+}
+.right-float {
+    float: right;
+}
+.full-width {
+    width: 100%;
+}
+.login-from-button {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
