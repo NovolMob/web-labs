@@ -9,9 +9,6 @@
 </head>
 <body>
 <div class="fixed-top">
-        <?php
-            include("config.php");
-        ?>
         <div class="container-fluid">
             <div class="row top-bar">
                 <div class="col-12">

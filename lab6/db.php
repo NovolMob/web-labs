@@ -7,6 +7,9 @@ class DataBase {
         private static $data = array();
 
         public static function load() {
+            if (!file_exists(DataBase::$file_name)) {
+                fclose(fopen(DataBase::$file_name, "w"));
+            }
             $file_size = filesize(DataBase::$file_name);
             $db = fopen(DataBase::$file_name, "r");
             if ($file_size > 0) {
