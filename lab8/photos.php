@@ -3,25 +3,25 @@
 
 <head>
     <?php
-        include_once("../config.php");
+        include_once("config.php");
     ?>
     <meta charset="UTF-8">
     <title><?php echo $your_photos; ?></title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../fonts/icomoon/style.css">
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
     <?php
         $cur_page = $your_photos;
-        include_once("../top.php");
+        include_once("components/top.php");
     ?>
 
     <div class="content">
-        <form action="upload_photo.php" method="post" enctype="multipart/form-data" class="mx-2">
+        <form action="<?php echo "$photos_dir"; ?>/upload.php" method="post" enctype="multipart/form-data" class="mx-2">
             <div class="form-group row">
                 <label for="file" class="col-sm-2 col-form-label">Загрузите фотографию</label>
                 <div class="col-sm-3">
@@ -39,25 +39,26 @@
 
     <?php
         $photos = array();
-        $opened_dir = opendir("./");
+        $opened_dir = opendir($photos_dir);
         while (($f = readdir($opened_dir)) != false) {
-            include_once("image_util.php");
-            include_once("image_comments.php");
+            include_once($_SERVER['DOCUMENT_ROOT']."\\$photos_dir\\image_util.php");
+            include_once($_SERVER['DOCUMENT_ROOT']."\\$photos_dir\\image_comments.php");
             if (!isImage($f)) continue;
 
-            $sz=getimagesize($f);
-            $tm=filemtime($f);
+            $path = "$photos_dir\\$f";
+            $sz=getimagesize($path);
+            $tm=filemtime($path);
             ImageComments::load();
             $photos[$tm] = array(
                 "time" => $tm,
                 "comment" => ImageComments::getComment($f),
                 "name" => $f,
-                "path" => $f,
+                "path" => $path,
                 "width" => $sz[0],
                 "height" => $sz[1]
             );
         }
-        ksort($photos);
+        arsort($photos);
     ?>
 
     <div class="container-fluid">

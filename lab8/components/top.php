@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div class="fixed-top">

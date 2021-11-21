@@ -7,13 +7,17 @@
     ?>
     <meta charset="UTF-8">
     <title><?php echo $feedback; ?></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
     <?php
         $cur_page = $feedback;
-        include("top.php");
+        include("components/top.php");
     ?>
 
     <div class="content">

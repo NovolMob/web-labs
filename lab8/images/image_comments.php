@@ -1,14 +1,19 @@
 <?php
     class ImageComments {
         private static $comments = array();
-        private static $file_name = "comments.txt";
+        private static $file_name = "images\\comments.txt";
+
+        private static function getFullPath(): String {
+            return $_SERVER['DOCUMENT_ROOT']."\\".ImageComments::$file_name;
+        }
 
         public static function load() {
-            if (!file_exists(ImageComments::$file_name)) {
-                fclose(fopen(ImageComments::$file_name, "w"));
+            $file_path = ImageComments::getFullPath();
+            if (!file_exists($file_path)) {
+                fclose(fopen($file_path, "w"));
             }
-            $size = filesize(ImageComments::$file_name);
-            $file = fopen(ImageComments::$file_name, "r");
+            $size = filesize($file_path);
+            $file = fopen($file_path, "r");
             if ($size > 0) {
                 ImageComments::decode(fread($file, $size));
             }
@@ -16,7 +21,8 @@
         }
 
         public static function save() {
-            $file = fopen(ImageComments::$file_name, "w");
+            $file_path = ImageComments::getFullPath();
+            $file = fopen($file_path, "w");
             fwrite($file, ImageComments::encode());
             fclose($file);
         }
@@ -30,12 +36,12 @@
             return json_encode(ImageComments::$comments);
         }
 
-        public static function getComment(string $name): string {
-            return array_key_exists($name, ImageComments::$comments) ? ImageComments::$comments[$name] : "";
+        public static function getComment(string $file_name): string {
+            return array_key_exists($file_name, ImageComments::$comments) ? ImageComments::$comments[$file_name] : "";
         }
 
-        public static function addComment(string $name, string $comment) {
-            ImageComments::$comments[$name] = $comment;
+        public static function addComment(string $file_name, string $comment) {
+            ImageComments::$comments[$file_name] = $comment;
         }
     }
 ?>
