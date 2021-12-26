@@ -1,26 +1,32 @@
 <?php
-    $createLiteral = "create";
-    $tableLiteral = "table";
-    $safetyCreateTableLiteral = "if not exists";
+    $createLiteral = "CREATE";
+    $tableLiteral = "TABLE";
+    $safetyCreateTableLiteral = "IF NOT EXISTS";
     $defaultCharacterSetLiteral = "default character set";
-    $selectLiteral = "select";
+    $selectLiteral = "SELECT";
     $allDatabases = "*";
-    $fromLiteral = "from";
-    $whereLiteral = "where";
-    $insertLiteral = "insert";
-    $intoLiteral = "into";
-    $valuesLiteral = "values";
-    $deleteLiteral = "delete";
+    $fromLiteral = "FROM";
+    $whereLiteral = "WHERE";
+    $insertLiteral = "INSERT";
+    $intoLiteral = "INTO";
+    $valuesLiteral = "VALUES";
+    $deleteLiteral = "DELETE";
+    $updateLiteral = "UPDATE";
+    $setLiteral = "SET";
 
     function safetyCreateTableQuery(string $tableName, string $columns, string $character): string {
         global $createLiteral, $tableLiteral, $safetyCreateTableLiteral, $defaultCharacterSetLiteral;
         return "$createLiteral $tableLiteral $safetyCreateTableLiteral $tableName $columns $defaultCharacterSetLiteral $character;";
     }
 
-    function getQuery(string $database = null, string $tableName, string $where): string {
+    function createSelect(string $database = null, string $tableName, string $where): string {
         global $selectLiteral, $allDatabases, $fromLiteral, $whereLiteral;
         $db = $database == null ? $allDatabases : $database;
-        return "$selectLiteral $db $fromLiteral $tableName $whereLiteral $where;";
+        $w = "";
+        if (isset($where) && !empty($where)) {
+            $w = $whereLiteral." ".$where;
+        }
+        return "$selectLiteral $db $fromLiteral $tableName $w;";
     }
 
     function createWheres(array $wheres): string {
@@ -59,6 +65,11 @@
     function createDelete(string $tableName, string $where): string {
         global $deleteLiteral, $fromLiteral, $whereLiteral;
         return "$deleteLiteral $fromLiteral $tableName $whereLiteral $where;";
+    }
+
+    function createUpdate(string $tableName, string $set, string $where): string  {
+        global $updateLiteral, $setLiteral, $whereLiteral;
+        return "$updateLiteral $tableName $setLiteral $set $whereLiteral $where;";
     }
 
 ?>

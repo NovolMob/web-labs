@@ -1,0 +1,10 @@
+body {
+  background-image: url(back.jpg);
+}
+.block {
+  --bs-bg-opacity: 0.75;
+  border-radius: 20px;
+}
+.rad-20 {
+  border-radius: 20px;
+}
