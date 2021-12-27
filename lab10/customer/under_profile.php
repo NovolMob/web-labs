@@ -33,7 +33,7 @@
                 <h3 id="price">Сумма: <?php $price = $order->count * $order->price; $total += $price; echo $price; ?>руб</h3>
             </div>
             <div class="d-flex flex-row">
-                <input type="hidden" name="order_product_id" value="<?php echo $order->id; ?>">
+                <input type="hidden" name="order_id" value="<?php echo $order->id; ?>">
                 <input class="form-control form-control-lg border-white btn-primary me-3" type="submit" name="method" value="Сохранить">
                 <input class="form-control form-control-lg border-white btn-primary" type="submit" name="method" value="Удалить">
             </div>
